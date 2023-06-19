@@ -7,9 +7,16 @@ using System.Linq.Expressions;
 
 namespace Core.Specifications
 {
-    public interface ISpecification<TEntity>
+    public interface ISpecification<T>
     {
-        Expression<Func<TEntity,bool>> Critiria {get;}
-        List<Expression<Func<TEntity,object>>> Includes {get;}
+        Expression<Func<T,bool>> Critiria {get;}
+        List<Expression<Func<T,object>>> Includes {get;}
+
+        Expression<Func<T,object>> OrderBy{get;}
+        Expression<Func<T,object>> OrderByDescending{get;}
+
+        public int Take { get;}
+        public int Skip { get;}
+        public bool IsPagingEnabled { get;}
     }
 }
