@@ -1,0 +1,15 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+.cart-no{
+    min-height: 25px;
+    min-width: 25px;
+    position:absolute;
+    top: -12px;
+    right: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: blue;
+    color: white;
+}
